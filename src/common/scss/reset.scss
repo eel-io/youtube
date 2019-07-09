@@ -1,0 +1,9 @@
+@import './color.scss';
+
+div, section, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol { list-style: none; }
+i, em { font-style: normal; }
