@@ -6,10 +6,10 @@ const ThemeConfig = createMuiTheme({
   // 改变 material-ui 主色
   palette: {
     primary: {
-      main: pink['A400'],
+      main: blue['A400'],
     },
     secondary: {
-      main: blue['A400'],
+      main: pink['A400'],
     },
   },
   // 改变全局 material-ui 字体
@@ -44,7 +44,9 @@ const ThemeConfig = createMuiTheme({
     },
     MuiTypography: {
       root: {
+        width: '100%',
         display: 'inline-flex',
+        alignItems: 'center',
         fontSize: '1.5rem !important',
       },
     },
@@ -54,6 +56,8 @@ const ThemeConfig = createMuiTheme({
         background: '#eee',
       },
     },
+
+    // change bottomNavigation styles
     MuiBottomNavigation: {
       root: {
         position: 'fixed',
@@ -67,13 +71,30 @@ const ThemeConfig = createMuiTheme({
     },
     MuiBottomNavigationAction: {
       root: {
-        color: '#fff',
+        color: blue['100'],
       },
     },
     MuiSvgIcon: {
       root: {
         width: '2rem',
         height: '2rem',
+      },
+    },
+
+    // change app-bar styles
+    MuiToolbar: {
+      regular: {
+        height: '4.6rem',
+        minHeight: 'auto',
+        borderBottom: '1px solid #333',
+        backgroundColor: '#000',
+      },
+    },
+    MuiIcon: {
+      root: {
+        width: 'auto',
+        height: 'auto',
+        fontSize: '2rem',
       },
     },
   },

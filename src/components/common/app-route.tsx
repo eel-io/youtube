@@ -7,6 +7,7 @@ import Popular from '@comp/popular';
 import Subscribe from '@comp/subscribe';
 import Inbox from '@comp/inbox';
 import Media from '@comp/media';
+import My from '@comp/my';
 import Page404 from '@comp/common/page-404';
 
 interface IProps {};
@@ -21,6 +22,7 @@ const AppRoute = (props: IProps, state: IState) => {
         <Route exact={true} path="/subscribe" component={Subscribe} />
         <Route exact={true} path="/inbox" component={Inbox} />
         <Route exact={true} path="/media" component={Media} />
+        <Route exact={true} path="/my" component={My} />
         <Route component={Page404} />
       </Switch>
     </Router>

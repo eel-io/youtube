@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 
+import AppHeader from '@comp/common/app-header';
 import AppNav from '@comp/common/app-nav';
 
 interface IProps {};
@@ -14,6 +15,8 @@ const Home = (props: IProps, state: IState) => {
 
   return (
     <div>
+      <AppHeader />
+
       <p>Home Page</p>
       <ul>
         <li>
