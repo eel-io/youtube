@@ -54,6 +54,28 @@ const ThemeConfig = createMuiTheme({
         background: '#eee',
       },
     },
+    MuiBottomNavigation: {
+      root: {
+        position: 'fixed',
+        width: '100%',
+        left: 0,
+        bottom: 0,
+        height: '4.6rem',
+        borderTop: '1px solid #333',
+        backgroundColor: '#000',
+      },
+    },
+    MuiBottomNavigationAction: {
+      root: {
+        color: '#fff',
+      },
+    },
+    MuiSvgIcon: {
+      root: {
+        width: '2rem',
+        height: '2rem',
+      },
+    },
   },
 });
 

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 
+import AppNav from '@comp/common/app-nav';
+
 interface IProps {};
 interface IState {};
 
@@ -21,6 +23,8 @@ const Home = (props: IProps, state: IState) => {
           <Button variant="contained" color="secondary">Secondary Button</Button>
         </li>
       </ul>
+
+      <AppNav value="home" />
     </div>
   )
 }
