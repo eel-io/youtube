@@ -65,4 +65,6 @@ module.exports = {
   appScss: resolveApp('src/scss'),
   appStore: resolveApp('src/store'),
   appUtil: resolveApp('src/util'),
+  appTool: resolveApp('src/util/tools'),
+  appMixin: resolveApp('src/util/mixin'),
 };

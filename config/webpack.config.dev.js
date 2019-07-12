@@ -112,6 +112,8 @@ module.exports = {
       '@scss': paths.appScss,
       '@store': paths.appStore,
       '@util': paths.appUtil,
+      '@tool': paths.appTool,
+      '@mixin': paths.appMixin,
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).

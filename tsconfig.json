@@ -32,6 +32,8 @@
       "@scss/*": ["src/scss/*"],
       "@store/*": ["src/store/*"],
       "@util/*": ["src/util/*"],
+      "@tool/*": ["src/util/tools/*"],
+      "@mixin/*": ["src/util/mixin/*"]
     }
   },
   "exclude": [
