@@ -22,7 +22,10 @@ const List = (props: IProps, state: IState) => {
       <CardMedia
         component="video"
         controls={true}
-        src="http://localhost:3000/video/oceans.mp4" />
+        height="230"
+        src="https://vjs.zencdn.net/v/oceans.mp4" />
+        {/* src="https://www.runoob.com/try/demo_source/movie.mp4" /> */}
+        {/* src="http://localhost:3000/video/oceans.mp4" /> */}
       <CardActionArea>
         <CardContent>
           <Typography variant="body1">
