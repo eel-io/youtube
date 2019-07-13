@@ -97,6 +97,12 @@ const ThemeConfig = createMuiTheme({
         fontSize: '2rem',
       },
     },
+    MuiCardContent: {
+      root: {
+        color: '#fff',
+        backgroundColor: '#111',
+      },
+    },
   },
 });
 
