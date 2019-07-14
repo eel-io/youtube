@@ -8,6 +8,8 @@ import VideocamIcon from '@material-ui/icons/Videocam';
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
 
+import HideOnScroll from './hide-on-scroll';
+
 interface IProps extends RouteComponentProps {
   history: any,
 };
@@ -42,36 +44,38 @@ const AppHeader = (props: IProps, state: IState) => {
   }
 
   return (
-    <AppBar>
-      <Toolbar>
-        <Typography variant="inherit" style={styles.typography}>
-          <p>
-            <Icon style={styles.iconStyle}>play_arrow</Icon>
-            <b>&nbsp;YouTube</b>
-          </p>
-          <section>
-            <IconButton  onClick={onCast} style={styles.iconButton}>
-              <CastConnected style={styles.iconColor} />
-            </IconButton>
-            <Link to="/upload">
-              <IconButton style={styles.iconButton}>
-                <VideocamIcon style={styles.iconColor} />
+    <HideOnScroll {...props}>
+      <AppBar>
+        <Toolbar>
+          <Typography variant="inherit" style={styles.typography}>
+            <p>
+              <Icon style={styles.iconStyle}>play_arrow</Icon>
+              <b>&nbsp;YouTube</b>
+            </p>
+            <section>
+              <IconButton  onClick={onCast} style={styles.iconButton}>
+                <CastConnected style={styles.iconColor} />
               </IconButton>
-            </Link>
-            <Link to="/search">
-              <IconButton style={styles.iconButton}>
-                <SearchIcon style={styles.iconColor} />
-              </IconButton>
-            </Link>
-            <Link to="/my">
-              <IconButton style={styles.iconButton}>
-                <PersonIcon style={styles.iconColor} />
-              </IconButton>
-            </Link>
-          </section>
-        </Typography>
-      </Toolbar>
-    </AppBar>
+              <Link to="/upload">
+                <IconButton style={styles.iconButton}>
+                  <VideocamIcon style={styles.iconColor} />
+                </IconButton>
+              </Link>
+              <Link to="/search">
+                <IconButton style={styles.iconButton}>
+                  <SearchIcon style={styles.iconColor} />
+                </IconButton>
+              </Link>
+              <Link to="/my">
+                <IconButton style={styles.iconButton}>
+                  <PersonIcon style={styles.iconColor} />
+                </IconButton>
+              </Link>
+            </section>
+          </Typography>
+        </Toolbar>
+      </AppBar>
+    </HideOnScroll>
   )
 }
 

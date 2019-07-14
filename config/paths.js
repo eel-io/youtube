@@ -67,4 +67,7 @@ module.exports = {
   appUtil: resolveApp('src/util'),
   appTool: resolveApp('src/util/tools'),
   appMixin: resolveApp('src/util/mixin'),
+  appStatic: resolveApp('src/static'),
+  appImage: resolveApp('src/static/image'),
+  appPicture: resolveApp('src/static/picture'),
 };

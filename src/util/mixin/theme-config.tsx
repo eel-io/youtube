@@ -56,6 +56,13 @@ const ThemeConfig = createMuiTheme({
         background: '#eee',
       },
     },
+    MuiPaper: {
+      root: {
+        display: 'flex',
+        color: '#fff',
+        backgroundColor: '#000',
+      },
+    },
 
     // change bottomNavigation styles
     MuiBottomNavigation: {

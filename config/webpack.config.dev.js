@@ -114,6 +114,9 @@ module.exports = {
       '@util': paths.appUtil,
       '@tool': paths.appTool,
       '@mixin': paths.appMixin,
+      '@static': paths.appStatic,
+      '@image': paths.appImage,
+      '@picture': paths.appPicture,
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
