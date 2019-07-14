@@ -59,6 +59,7 @@ const ThemeConfig = createMuiTheme({
     MuiPaper: {
       root: {
         display: 'flex',
+        flexDirection: 'column',
         color: '#fff',
         backgroundColor: '#000',
       },
