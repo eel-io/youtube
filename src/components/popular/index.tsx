@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 
 import AppNav from '@comp/common/app-nav';
+import AppCover from '@comp/common/app-cover';
+import store from '@store/common/cover';
 import '@scss/popular/main';
 
 interface IProps {};
@@ -13,12 +15,30 @@ const Popular = (props: IProps, state: IState) => {
     console.log('popular props: ', props);
   }, []);
 
+  const onCover = () => {
+    console.log('cover');
+    store.toggleCover();
+  }
+
   return (
     <div className="popular-page">
-      <p>Popular Page</p>
-      <p>
-        <Button variant="contained" color="primary">Portal</Button>
-      </p>
+      <section>
+        <p>Popular Page</p>
+        <p>
+          <Button variant="contained" color="secondary"
+            onClick={onCover}>Cover</Button>
+        </p>
+      </section>
+
+      <AppCover>
+        <ul>
+          <li>上海</li>
+          <li>深圳</li>
+          <li>广州</li>
+          <li>成都</li>
+          <li>杭州</li>
+        </ul>
+      </AppCover>
 
       <AppNav value="popular" />
     </div>

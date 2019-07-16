@@ -1,24 +1,24 @@
-// import React, { useEffect, ReactNode } from 'react';
-// import { createPortal } from 'react-dom';
-// import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { useEffect, ReactNode } from 'react';
+import { createPortal } from 'react-dom';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
-// interface IProps extends RouteComponentProps {
-//   children: ReactNode,
-// };
-// interface IState {};
+interface IProps extends RouteComponentProps {
+  children?: ReactNode,
+};
+interface IState {};
 
-// const AppModal = (props: IProps, state: IState) => {
+const AppModal = (props: IProps, state: IState) => {
 
-//   useEffect(() => {
-//     console.log('modal props::: ', props);
-//   }, []);
+  useEffect(() => {
+    console.log('modal props::: ', props);
+  }, []);
 
-//   return (
-//     createPortal(
-//       props.children,
-//       document.getElementById('modal') as HTMLElement,
-//     )
-//   )
-// }
+  return (
+    createPortal(
+      props.children,
+      document.getElementById('modal') as HTMLElement,
+    )
+  )
+}
 
-// export default withRouter(AppModal);
+export default withRouter(AppModal);
