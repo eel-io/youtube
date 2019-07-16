@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 
+import '@scss/subscribe/main';
 import useModal from '@/components/hooks/use-modal';
 import AppNav from '@comp/common/app-nav';
 import AppCover from '@comp/common/app-cover';
@@ -17,8 +18,11 @@ const Subscribe = (props: IProps, state: IState) => {
   }, []);
 
   return (
-    <div>
-      <p onClick={toggleModal}>点击试一试::</p>
+    <div className="subscribe-page">
+      <p>
+        <Button variant="contained" color="primary"
+          onClick={toggleModal}>点击试一试</Button>
+      </p>
 
       <ul className={isModal ? '' : 'none'}>
         <li>React</li>

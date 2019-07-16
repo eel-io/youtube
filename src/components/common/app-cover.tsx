@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, ReactNode } from 'react';
+import React, { ReactNode, MutableRefObject } from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import Paper from '@material-ui/core/Paper';
@@ -11,6 +11,7 @@ import CoverPortal from './cover-portal';
 
 interface IProps extends RouteComponentProps {
   children: ReactNode,
+  coverRef?: MutableRefObject<any>,
 };
 interface IState {};
 
@@ -25,15 +26,11 @@ const useStyles = makeStyles({
 
 const AppCover = (props: IProps, state: IState) => {
   const classes = useStyles();
-  const coverRef = useRef(null);
-
-  useEffect(() => {
-    console.log('app cover:: ', props);
-  }, []);
 
   return (
     <CoverPortal>
-      <div ref={coverRef} className={store.isCover ? "app-cover" : "none"}>
+      <div ref={props.coverRef}
+        className={store.isCover ? "app-cover" : "none"}>
         <section className="app-cover__header">
           <Paper square={true} className={classes.paper}>
             <Typography variant="button" className={classes.typography}>

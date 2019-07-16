@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Button from '@material-ui/core/Button';
 
 import AppNav from '@comp/common/app-nav';
@@ -10,27 +10,26 @@ interface IProps {};
 interface IState {};
 
 const Popular = (props: IProps, state: IState) => {
+  const coverRef = useRef(null);
 
   useEffect(() => {
     console.log('popular props: ', props);
   }, []);
 
   const onCover = () => {
-    console.log('cover');
     store.toggleCover();
+    console.log(coverRef.current);
   }
 
   return (
     <div className="popular-page">
-      <section>
-        <p>Popular Page</p>
-        <p>
-          <Button variant="contained" color="secondary"
-            onClick={onCover}>Cover</Button>
-        </p>
-      </section>
+      <p>Popular Page</p>
+      <p>
+        <Button variant="contained" color="secondary"
+          onClick={onCover}>Cover</Button>
+      </p>
 
-      <AppCover>
+      <AppCover coverRef={coverRef}>
         <ul>
           <li>上海</li>
           <li>深圳</li>
