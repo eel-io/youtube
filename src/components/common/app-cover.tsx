@@ -1,4 +1,4 @@
-import React, { useEffect, ReactNode } from 'react';
+import React, { useEffect, useRef, ReactNode } from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { observer } from 'mobx-react';
 import Paper from '@material-ui/core/Paper';
@@ -7,6 +7,7 @@ import Icon from '@material-ui/core/Icon';
 import { makeStyles } from '@material-ui/core/styles';
 
 import store from '@store/common/cover';
+import CoverPortal from './cover-portal';
 
 interface IProps extends RouteComponentProps {
   children: ReactNode,
@@ -24,22 +25,25 @@ const useStyles = makeStyles({
 
 const AppCover = (props: IProps, state: IState) => {
   const classes = useStyles();
+  const coverRef = useRef(null);
 
   useEffect(() => {
     console.log('app cover:: ', props);
   }, []);
 
   return (
-    <div className={store.isCover ? "app-cover" : "none"}>
-      <section className="app-cover__header">
-        <Paper square={true} className={classes.paper}>
-          <Typography variant="button" className={classes.typography}>
-            <Icon color="secondary" onClick={store.toggleCover}>close</Icon>
-          </Typography>
-        </Paper>
-      </section>
-      <>{props.children}</>
-    </div>
+    <CoverPortal>
+      <div ref={coverRef} className={store.isCover ? "app-cover" : "none"}>
+        <section className="app-cover__header">
+          <Paper square={true} className={classes.paper}>
+            <Typography variant="button" className={classes.typography}>
+              <Icon color="secondary" onClick={store.toggleCover}>close</Icon>
+            </Typography>
+          </Paper>
+        </section>
+        <>{props.children}</>
+      </div>
+    </CoverPortal>
   )
 }
 

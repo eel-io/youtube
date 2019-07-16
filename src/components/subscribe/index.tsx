@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
+import Button from '@material-ui/core/Button';
 
 import useModal from '@/components/hooks/use-modal';
 import AppNav from '@comp/common/app-nav';
+import AppCover from '@comp/common/app-cover';
+import store from '@store/common/cover';
 
 interface IProps {};
 interface IState {};
@@ -15,7 +18,7 @@ const Subscribe = (props: IProps, state: IState) => {
 
   return (
     <div>
-      <p onClick={toggleModal}>Subscribe Page::</p>
+      <p onClick={toggleModal}>点击试一试::</p>
 
       <ul className={isModal ? '' : 'none'}>
         <li>React</li>
@@ -24,6 +27,22 @@ const Subscribe = (props: IProps, state: IState) => {
         <li>TypeScript</li>
         <li>Material-UI</li>
       </ul>
+
+      <p>
+        <Button variant="contained" color="primary"
+          onClick={store.toggleCover}>Open Cover</Button>
+      </p>
+
+      <AppCover>
+        <ul>
+          <li>谷歌</li>
+          <li>微软</li>
+          <li>Facebook</li>
+          <li>阿里巴巴</li>
+          <li>腾讯</li>
+          <li>字节跳动</li>
+        </ul>
+      </AppCover>
 
       <AppNav value="subscribe" />
     </div>
