@@ -8,7 +8,6 @@ interface IProps {
 };
 interface IState {};
 
-
 const AppTheme = (props: IProps, state: IState) => {
   return (
     <ThemeProvider theme={ThemeConfig}>

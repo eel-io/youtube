@@ -23,16 +23,6 @@ const Home = (props: IProps, state: IState) => {
         <List />
         <List />
         <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
-        <List />
         <p>End ---</p>
       </section>
 

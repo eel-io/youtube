@@ -18,7 +18,6 @@ const Popular = (props: IProps, state: IState) => {
 
   const onCover = () => {
     store.toggleCover();
-    console.log(coverRef.current);
   }
 
   return (
