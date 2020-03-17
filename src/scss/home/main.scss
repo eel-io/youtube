@@ -1,5 +1,12 @@
 @import '@commonScss/color.scss';
 
 .home-page {
+  footer {
+    padding: 1rem 0;
+    color: $fff;
 
+    a {
+      color: inherit;
+    }
+  }
 }
